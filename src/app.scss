@@ -1,0 +1,121 @@
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// body {
+//   font-family: 'Oswald', Helvetica, Arial, sans-serif;
+//   font-weight: 300;
+//   min-height: 100%
+// }
+
+.container {
+
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  section {
+    grid-column: 2 / 5;
+    grid-row: 2 / 5;  
+    
+    h2 {
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .todo-header {
+      display: flex;
+      margin: 20px 0 20px 0;
+      justify-content: space-evenly;
+      border-bottom: 1px solid #808080;
+
+      .selected {
+        border-bottom: 4px solid #006db0;
+      }
+
+      button {
+        background-color: #fff;
+        border: none;
+        border-bottom: 1px solid #808080;
+        cursor: pointer;
+        margin-bottom: -1px;
+        height: 30px;
+        width: 100px;
+      }
+
+    }
+
+    form {
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      input {
+        border-radius: 4px;
+        padding: 10px 10px;
+        width: 80%;
+      }
+
+      button {
+        border: none;
+        border-radius: 4px;
+        background-color: #006db0;
+        color: #fff;
+        cursor: pointer;
+        height: 40px;
+        width: 15%;
+      }
+    }
+
+    .todo-list {
+      display: flex;
+      flex-direction: column;
+      ul {
+        width: 100%;
+        
+        li {
+          display: flex;
+          justify-content: space-between;
+          list-style-type: none;
+          padding: 4px;
+          width: 100%;
+
+          input[type="checkbox"]{
+            margin-right: 5px;
+            transform: scale(1.5)
+          }
+
+          i {
+            cursor: pointer;
+          }
+
+          .completed{
+            text-decoration: line-through;
+          }
+
+        }
+
+      }
+
+      button {
+        background-color: #F03D17;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-left: auto;
+        width: 100px;
+        padding: 10px;
+      }
+
+    }
+
+  }
+
+}
